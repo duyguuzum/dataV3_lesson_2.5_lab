@@ -13,6 +13,8 @@ SELECT
    avg(length), FLOOR((avg(length)) / 60) as 'hours',MOD((avg(length)), 60) as 'minutes'
 FROM sakila.film;
 
+SELECT count(distinct(last_name)) FROM sakila.actor;
+
 SELECT DATEDIFF(MAX(rental_date), MIN(rental_date)) AS DateDifference
 FROM sakila.rental;
 
